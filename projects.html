@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - MakersShare</title>
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">MakersShare</a>
+                <ul class="nav-menu">
+                    <button id="mode">🌙</button>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="categories.html">Catégories</a></li>
+                    <li><a href="search.html">Recherche</a></li>
+                    <li><a href="profile.html">Profil</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="section-container">
+                <h2>Tous les Projets</h2>
+                
+                <div class="filters-container">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Rechercher un projet...">
+                        <button class="btn btn-primary">Rechercher</button>
+                    </div>
+
+                    <div class="filters-grid">
+                        <div class="filter-group">
+                            <label for="category-filter">Catégorie</label>
+                            <select id="category-filter">
+                                <option value="">Toutes les catégories</option>
+                                <option value="arduino">Arduino</option>
+                                <option value="esp32">ESP32/ESP8266</option>
+                                <option value="robotique">Robotique</option>
+                                <option value="iot">IoT & Réseaux</option>
+                                <option value="ia">Intelligence Artificielle</option>
+                                <option value="programmation">Programmation</option>
+                                <option value="3d">Design & 3D</option>
+                                <option value="energie">Énergie & Systèmes</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="difficulty-filter">Difficulté</label>
+                            <select id="difficulty-filter">
+                                <option value="">Tous les niveaux</option>
+                                <option value="facile">Facile</option>
+                                <option value="moyen">Moyen</option>
+                                <option value="difficile">Difficile</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="sort-filter">Trier par</label>
+                            <select id="sort-filter">
+                                <option value="recent">Plus récent</option>
+                                <option value="populaire">Plus populaire</option>
+                                <option value="alphabetique">Alphabétique</option>
+                                <option value="vues">Plus de vues</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="loading">Chargement des projets...</div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="add.html" class="btn btn-primary">Publier un nouveau projet</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 MakersShare - Plateforme collaborative de partage de projets</p>
+            <ul class="footer-links">
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

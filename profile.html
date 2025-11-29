@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - MakersShare</title>
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">MakersShare</a>
+                <ul class="nav-menu">
+                    <button id="mode">🌙</button>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="categories.html">Catégories</a></li>
+                    <li><a href="search.html">Recherche</a></li>
+                    <li><a href="profile.html">Profil</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="section-container">
+                <div style="background: var(--card-bg); border-radius: 16px; padding: 3rem; border: 1px solid var(--border-color); margin-bottom: 3rem;">
+                    <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+                        <div class="avatar" style="width: 120px; height: 120px;">
+                            <img src="https://i.pravatar.cc/150?img=8" alt="Profile">
+                        </div>
+                        <div style="flex: 1;">
+                            <h1 style="margin-bottom: 0.5rem;">Nabil</h1>
+                            <p style="color: var(--text-secondary); margin-bottom: 1rem;">@Nabil.L • Membre depuis Nov 2024</p>
+                            <p style="color: var(--text-secondary); line-height: 1.8;">
+                                Passionné d'électronique et de robotique. J'adore créer des projets Arduino et partager mes connaissances avec la communauté.
+                            </p>
+                            <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                                <span style="background: rgba(91, 127, 255, 0.2); color: var(--primary-blue); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">Arduino</span>
+                                <span style="background: rgba(91, 127, 255, 0.2); color: var(--primary-blue); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">Python</span>
+                                <span style="background: rgba(91, 127, 255, 0.2); color: var(--primary-blue); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">Robotique</span>
+                                <span style="background: rgba(91, 127, 255, 0.2); color: var(--primary-blue); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">IoT</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                        <div style="text-align: center;">
+                            <h3 style="color: var(--primary-blue); font-size: 2rem; margin-bottom: 0.5rem;">12</h3>
+                            <p style="color: var(--text-secondary);">Projets publiés</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <h3 style="color: var(--primary-blue); font-size: 2rem; margin-bottom: 0.5rem;">1.2k</h3>
+                            <p style="color: var(--text-secondary);">Vues totales</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <h3 style="color: var(--primary-blue); font-size: 2rem; margin-bottom: 0.5rem;">89</h3>
+                            <p style="color: var(--text-secondary);">J'aime reçus</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <h3 style="color: var(--primary-blue); font-size: 2rem; margin-bottom: 0.5rem;">45</h3>
+                            <p style="color: var(--text-secondary);">Abonnés</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Mes Projets</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?w=400&h=300&fit=crop" alt="Project" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Bras Robotique DIY</h3>
+                            <p class="project-author">Par Nabil</p>
+                            <span class="project-category">Robotique</span>
+                            <div class="project-stats">
+                                <span>👁 1234</span>
+                                <span>❤️ 89</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1592210454359-9043f067919b?w=400&h=300&fit=crop" alt="Project" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Station Météo IoT</h3>
+                            <p class="project-author">Par Nabil</p>
+                            <span class="project-category">IoT</span>
+                            <div class="project-stats">
+                                <span>👁 987</span>
+                                <span>❤️ 67</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400&h=300&fit=crop" alt="Project" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Système d'Alarme Smart</h3>
+                            <p class="project-author">Par Nabil</p>
+                            <span class="project-category">Arduino</span>
+                            <div class="project-stats">
+                                <span>👁 756</span>
+                                <span>❤️ 54</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="add.html" class="btn btn-primary">Publier un nouveau projet</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 MakersShare - Plateforme collaborative de partage de projets</p>
+            <ul class="footer-links">
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

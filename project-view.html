@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail du Projet - MakersShare</title>
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">MakersShare</a>
+                <ul class="nav-menu">
+                    <button id="mode">🌙</button>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="categories.html">Catégories</a></li>
+                    <li><a href="search.html">Recherche</a></li>
+                    <li><a href="profile.html">Profil</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="section-container">
+                <div style="margin-bottom: 2rem;">
+                    <a href="projects.html" style="color: var(--primary-blue); text-decoration: none;">← Retour aux projets</a>
+                </div>
+
+                <div style="background: var(--card-bg); border-radius: 16px; padding: 3rem; border: 1px solid var(--border-color);">
+                    <h1 style="margin-bottom: 1rem;">Bras Robotique DIY</h1>
+                    
+                    <div style="display: flex; gap: 2rem; align-items: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <div class="avatar" style="width: 40px; height: 40px;">
+                                <img src="https://i.pravatar.cc/150?img=8" alt="Author">
+                            </div>
+                            <span style="color: var(--text-secondary);">Par <a href="profile.html" style="color: var(--primary-blue); text-decoration: none;">Nabil</a></span>
+                        </div>
+                        <span style="color: var(--text-secondary);">📅 Publié le 20 Nov 2025</span>
+                        <span class="project-category">Robotique</span>
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?w=800&h=400&fit=crop" alt="Project" style="width: 100%; border-radius: 12px; margin-bottom: 2rem;">
+
+                    <div style="display: flex; gap: 2rem; margin-bottom: 3rem; flex-wrap: wrap;">
+                        <div style="text-align: center;">
+                            <p style="font-size: 1.5rem; color: var(--primary-blue); font-weight: 600;">1234</p>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Vues</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <p style="font-size: 1.5rem; color: var(--primary-blue); font-weight: 600;">89</p>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">J'aime</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <p style="font-size: 1.5rem; color: var(--primary-blue); font-weight: 600;">Moyen</p>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Difficulté</p>
+                        </div>
+                    </div>
+
+                    <h2 style="margin-bottom: 1rem;">Description</h2>
+                    <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+                        Ce projet présente la construction d'un bras robotique DIY contrôlé par Arduino. Le bras dispose de 4 degrés de liberté et peut être contrôlé via une interface série ou par des boutons physiques. Parfait pour apprendre les bases de la robotique et de la programmation Arduino.
+                    </p>
+
+                    <h2 style="margin-bottom: 1rem;">Composants nécessaires</h2>
+                    <ul style="color: var(--text-secondary); line-height: 2; padding-left: 1.5rem; margin-bottom: 2rem;">
+                        <li>Arduino Uno</li>
+                        <li>4x Servomoteurs MG996R</li>
+                        <li>Alimentation 5V 3A</li>
+                        <li>Câbles de connexion</li>
+                        <li>Structure en bois ou impression 3D</li>
+                        <li>Boutons poussoirs (optionnel)</li>
+                    </ul>
+
+                    <h2 style="margin-bottom: 1rem;">Code source</h2>
+                    <div style="background: var(--darker-bg); border-radius: 8px; padding: 1.5rem; overflow-x: auto; margin-bottom: 2rem;">
+                        <pre style="color: var(--text-primary); font-family: 'Courier New', monospace; margin: 0;"><code>#include &lt;Servo.h&gt;
+
+Servo servo1, servo2, servo3, servo4;
+
+void setup() {
+  servo1.attach(9);
+  servo2.attach(10);
+  servo3.attach(11);
+  servo4.attach(12);
+  
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Position initiale
+  servo1.write(90);
+  servo2.write(90);
+  servo3.write(90);
+  servo4.write(90);
+  delay(1000);
+  
+  // Mouvement de démonstration
+  for(int pos = 0; pos <= 180; pos++) {
+    servo1.write(pos);
+    delay(15);
+  }
+}</code></pre>
+                    </div>
+
+                    <h2 style="margin-bottom: 1rem;">Étapes de réalisation</h2>
+                    <div style="display: grid; gap: 1.5rem;">
+                        <div style="background: var(--darker-bg); padding: 1.5rem; border-radius: 8px;">
+                            <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">1. Assemblage mécanique</h3>
+                            <p style="color: var(--text-secondary);">Assemblez la structure du bras robotique en fixant les servomoteurs aux articulations.</p>
+                        </div>
+                        <div style="background: var(--darker-bg); padding: 1.5rem; border-radius: 8px;">
+                            <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">2. Câblage électrique</h3>
+                            <p style="color: var(--text-secondary);">Connectez les servomoteurs à l'Arduino selon le schéma fourni.</p>
+                        </div>
+                        <div style="background: var(--darker-bg); padding: 1.5rem; border-radius: 8px;">
+                            <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">3. Programmation</h3>
+                            <p style="color: var(--text-secondary);">Téléversez le code Arduino et testez les mouvements de base.</p>
+                        </div>
+                        <div style="background: var(--darker-bg); padding: 1.5rem; border-radius: 8px;">
+                            <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">4. Calibration</h3>
+                            <p style="color: var(--text-secondary);">Ajustez les positions des servomoteurs pour un mouvement optimal.</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                        <h2 style="margin-bottom: 1.5rem;">Commentaires</h2>
+                        <div style="background: var(--darker-bg); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                                <div class="avatar" style="width: 40px; height: 40px;">
+                                    <img src="https://i.pravatar.cc/150?img=5" alt="User">
+                                </div>
+                                <div style="flex: 1;">
+                                    <p style="color: var(--primary-blue); font-weight: 600; margin-bottom: 0.5rem;">SARAH L.</p>
+                                    <p style="color: var(--text-secondary);">Excellent projet ! J'ai réussi à le reproduire facilement. Merci pour le partage !</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="background: var(--darker-bg); padding: 1.5rem; border-radius: 8px;">
+                            <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                                <div class="avatar" style="width: 40px; height: 40px;">
+                                    <img src="https://i.pravatar.cc/150?img=7" alt="User">
+                                </div>
+                                <div style="flex: 1;">
+                                    <p style="color: var(--primary-blue); font-weight: 600; margin-bottom: 0.5rem;">Youssef K.</p>
+                                    <p style="color: var(--text-secondary);">Super tutoriel ! Pourrais-tu ajouter un schéma de câblage détaillé ?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 MakersShare - Plateforme collaborative de partage de projets</p>
+            <ul class="footer-links">
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

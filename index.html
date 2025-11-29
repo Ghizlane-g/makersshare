@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakersShare - Plateforme de Projets</title>
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">MakersShare</a>
+                <ul class="nav-menu">
+                    <button id="mode">🌙</button>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="categories.html">Catégories</a></li>
+                    <li><a href="search.html">Recherche</a></li>
+                    <li><a href="profile.html">Profil</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Découvrez une communauté de makers passionnés</h1>
+                <p>Explorez des milliers de projets, partagez vos créations et collaborez avec d'autres esprits créatifs du monde entier.</p>
+
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <h3 id="projects-count">0</h3>
+                        <p>Projets publiés</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="users-count">0</h3>
+                        <p>Utilisateurs actifs</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="views-count">0</h3>
+                        <p>Vues totales</p>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn btn-primary">Explorer les Projets</a>
+                    <a href="add.html" class="btn btn-secondary">Partager une Création</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-projects">
+            <div class="section-container">
+                <h2>Derniers Projets Publiés</h2>
+                <div id="recent-projects-grid" class="projects-grid">
+                    <div class="loading">Chargement des projets...</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-projects">
+            <div class="section-container">
+                <h2>Projets les Plus Populaires</h2>
+                <div id="popular-projects-grid" class="projects-grid">
+                    <div class="loading">Chargement des projets...</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <div class="section-container">
+                <h2>Catégories</h2>
+
+                <div class="categories-grid">
+                    <div class="category-card" onclick="window.location.href='categories.html#arduino'">
+                        <div class="category-icon">🔌</div>
+                        <h3>Arduino</h3>
+                        <p>Projets électroniques</p>
+                    </div>
+
+                    <div class="category-card" onclick="window.location.href='categories.html#esp32'">
+                        <div class="category-icon">📡</div>
+                        <h3>ESP32/ESP8266</h3>
+                        <p>IoT et WiFi</p>
+                    </div>
+
+                    <div class="category-card" onclick="window.location.href='categories.html#robotique'">
+                        <div class="category-icon">🤖</div>
+                        <h3>Robotique</h3>
+                        <p>Robots et automatisation</p>
+                    </div>
+
+                    <div class="category-card" onclick="window.location.href='categories.html#iot'">
+                        <div class="category-icon">🌐</div>
+                        <h3>IoT & Réseaux</h3>
+                        <p>Objets connectés</p>
+                    </div>
+
+                    <div class="category-card" onclick="window.location.href='categories.html#ia'">
+                        <div class="category-icon">🧠</div>
+                        <h3>Intelligence Artificielle</h3>
+                        <p>Machine Learning</p>
+                    </div>
+
+                    <div class="category-card" onclick="window.location.href='categories.html#prog'">
+                        <div class="category-icon">💻</div>
+                        <h3>Programmation</h3>
+                        <p>Code et développement</p>
+                    </div>
+
+                    <div class="category-card" onclick="window.location.href='categories.html#3d'">
+                        <div class="category-icon">🎨</div>
+                        <h3>Design & 3D</h3>
+                        <p>Impression 3D</p>
+                    </div>
+
+                    <div class="category-card" onclick="window.location.href='categories.html#energie'">
+                        <div class="category-icon">⚡</div>
+                        <h3>Énergie & Systèmes</h3>
+                        <p>Énergies renouvelables</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="section-container">
+                <h2>Témoignages</h2>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="avatar">
+                            <img src="https://i.pravatar.cc/150?img=1" alt="Amina">
+                        </div>
+                        <blockquote>"Ce site m'a aidé à terminer mon projet de fin d'études rapidement. La communauté est incroyable!"</blockquote>
+                        <span class="name">- Nabil, étudiant</span>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="avatar">
+                            <img src="https://i.pravatar.cc/150?img=12" alt="Youssef">
+                        </div>
+                        <blockquote>"Je partage mes tutos et reçois toujours de bons retours. Une plateforme parfaite pour les makers!"</blockquote>
+                        <span class="name">- Youssef, maker</span>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="avatar">
+                            <img src="https://i.pravatar.cc/150?img=5" alt="Sarah">
+                        </div>
+                        <blockquote>"J'ai trouvé l'inspiration pour mes projets Arduino. Merci à toute la communauté!"</blockquote>
+                        <span class="name">- Sarah, développeuse</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 MakersShare - Plateforme collaborative de partage de projets</p>
+            <ul class="footer-links">
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+            </ul>
+            <p class="contributors">Un grand merci à tous les contributeurs</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

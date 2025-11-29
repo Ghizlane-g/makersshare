@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - MakersShare</title>
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">MakersShare</a>
+                <ul class="nav-menu">
+                    <button id="mode">🌙</button>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="categories.html">Catégories</a></li>
+                    <li><a href="search.html">Recherche</a></li>
+                    <li><a href="profile.html">Profil</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="section-container">
+                <h2>Contactez-nous</h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;">
+                    Une question, une suggestion ou besoin d'aide ? N'hésitez pas à nous contacter.
+                </p>
+
+                <form style="max-width: 600px;">
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="nom">Nom complet</label>
+                        <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre.email@exemple.com" required>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="sujet">Sujet</label>
+                        <select id="sujet" name="sujet" required>
+                            <option value="">Sélectionnez un sujet</option>
+                            <option value="question">Question générale</option>
+                            <option value="support">Support technique</option>
+                            <option value="suggestion">Suggestion</option>
+                            <option value="bug">Signaler un bug</option>
+                            <option value="partenariat">Partenariat</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Votre message..." style="min-height: 150px;" required></textarea>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                    </div>
+                </form>
+
+                <div style="margin-top: 4rem; text-align: center;">
+                    <h3 style="margin-bottom: 1.5rem;">Autres moyens de nous contacter</h3>
+                    <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; color: var(--text-secondary);">
+                        <div>
+                            <p style="font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">📧 Email</p>
+                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="63000c0d17020017232e02080611300b0211064d0e02">[email&#160;protected]</a></p>
+                        </div>
+                        <div>
+                            <p style="font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">📱 Téléphone</p>
+                            <p>+212 5 22 00 00 00</p>
+                        </div>
+                        <div>
+                            <p style="font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">📍 Adresse</p>
+                            <p>Agadir, Maroc</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 MakersShare - Plateforme collaborative de partage de projets</p>
+            <ul class="footer-links">
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="app.js"></script>
+</body>
+</html>

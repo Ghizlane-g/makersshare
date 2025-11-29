@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catégories - MakersShare</title>
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">MakersShare</a>
+                <ul class="nav-menu">
+                    <button id="mode">🌙</button>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="categories.html">Catégories</a></li>
+                    <li><a href="search.html">Recherche</a></li>
+                    <li><a href="profile.html">Profil</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="section-container">
+                <h2>Explorez par Catégorie</h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;">
+                    Découvrez des projets organisés par domaine d'expertise
+                </p>
+
+                <div class="categories-grid">
+                    <div class="category-card" id="arduino">
+                        <div class="category-icon">🔌</div>
+                        <h3>Arduino</h3>
+                        <p>Projets électroniques avec Arduino Uno, Mega, Nano</p>
+                        <p style="color: var(--primary-blue); margin-top: 1rem; font-weight: 600;">234 projets</p>
+                    </div>
+
+                    <div class="category-card" id="esp32">
+                        <div class="category-icon">📡</div>
+                        <h3>ESP32/ESP8266</h3>
+                        <p>Projets IoT et WiFi avec ESP32 et ESP8266</p>
+                        <p style="color: var(--primary-blue); margin-top: 1rem; font-weight: 600;">187 projets</p>
+                    </div>
+
+                    <div class="category-card" id="robotique">
+                        <div class="category-icon">🤖</div>
+                        <h3>Robotique</h3>
+                        <p>Robots, bras robotiques, drones et automatisation</p>
+                        <p style="color: var(--primary-blue); margin-top: 1rem; font-weight: 600;">156 projets</p>
+                    </div>
+
+                    <div class="category-card" id="iot">
+                        <div class="category-icon">🌐</div>
+                        <h3>IoT & Réseaux</h3>
+                        <p>Objets connectés, domotique et communication</p>
+                        <p style="color: var(--primary-blue); margin-top: 1rem; font-weight: 600;">298 projets</p>
+                    </div>
+
+                    <div class="category-card" id="ia">
+                        <div class="category-icon">🧠</div>
+                        <h3>Intelligence Artificielle</h3>
+                        <p>Machine Learning, vision par ordinateur, IA embarquée</p>
+                        <p style="color: var(--primary-blue); margin-top: 1rem; font-weight: 600;">92 projets</p>
+                    </div>
+
+                    <div class="category-card" id="programmation">
+                        <div class="category-icon">💻</div>
+                        <h3>Programmation</h3>
+                        <p>Code, développement logiciel, applications</p>
+                        <p style="color: var(--primary-blue); margin-top: 1rem; font-weight: 600;">421 projets</p>
+                    </div>
+
+                    <div class="category-card" id="3d">
+                        <div class="category-icon">🎨</div>
+                        <h3>Design & 3D</h3>
+                        <p>Impression 3D, modélisation, fabrication</p>
+                        <p style="color: var(--primary-blue); margin-top: 1rem; font-weight: 600;">178 projets</p>
+                    </div>
+
+                    <div class="category-card" id="energie">
+                        <div class="category-icon">⚡</div>
+                        <h3>Énergie & Systèmes</h3>
+                        <p>Énergies renouvelables, batteries, alimentation</p>
+                        <p style="color: var(--primary-blue); margin-top: 1rem; font-weight: 600;">134 projets</p>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">🎮</div>
+                        <h3>Gaming</h3>
+                        <p>Consoles DIY, jeux rétro, arcade</p>
+                        <p style="color: var(--primary-blue); margin-top: 1rem; font-weight: 600;">89 projets</p>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">🎵</div>
+                        <h3>Audio & Musique</h3>
+                        <p>Synthétiseurs, amplificateurs, instruments</p>
+                        <p style="color: var(--primary-blue); margin-top: 1rem; font-weight: 600;">67 projets</p>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">🌱</div>
+                        <h3>Agriculture & Jardinage</h3>
+                        <p>Hydroponie, serres automatisées, capteurs</p>
+                        <p style="color: var(--primary-blue); margin-top: 1rem; font-weight: 600;">112 projets</p>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">🚗</div>
+                        <h3>Automobile</h3>
+                        <p>Voitures RC, diagnostics OBD, modifications</p>
+                        <p style="color: var(--primary-blue); margin-top: 1rem; font-weight: 600;">78 projets</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 MakersShare - Plateforme collaborative de partage de projets</p>
+            <ul class="footer-links">
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

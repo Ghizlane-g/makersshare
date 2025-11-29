@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche Avancée - MakersShare</title>
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">MakersShare</a>
+                <ul class="nav-menu">
+                    <button id="mode">🌙</button>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="categories.html">Catégories</a></li>
+                    <li><a href="search.html">Recherche</a></li>
+                    <li><a href="profile.html">Profil</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="section-container">
+                <h2>Recherche Avancée</h2>
+                
+                <form style="max-width: 800px;">
+                    <div style="margin-bottom: 2rem;">
+                        <label for="search">Rechercher</label>
+                        <input type="text" id="search" name="search" placeholder="Mots-clés, titre, auteur..." required>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                        <div>
+                            <label for="category">Catégorie</label>
+                            <select id="category" name="category">
+                                <option value="">Toutes</option>
+                                <option value="arduino">Arduino</option>
+                                <option value="esp32">ESP32/ESP8266</option>
+                                <option value="robotique">Robotique</option>
+                                <option value="iot">IoT & Réseaux</option>
+                                <option value="ia">Intelligence Artificielle</option>
+                                <option value="programmation">Programmation</option>
+                                <option value="3d">Design & 3D</option>
+                                <option value="energie">Énergie & Systèmes</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="difficulty">Difficulté</label>
+                            <select id="difficulty" name="difficulty">
+                                <option value="">Tous niveaux</option>
+                                <option value="facile">Facile</option>
+                                <option value="moyen">Moyen</option>
+                                <option value="difficile">Difficile</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="language">Langage</label>
+                            <select id="language" name="language">
+                                <option value="">Tous</option>
+                                <option value="c">C/C++</option>
+                                <option value="python">Python</option>
+                                <option value="javascript">JavaScript</option>
+                                <option value="arduino">Arduino</option>
+                                <option value="micropython">MicroPython</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="microcontroller">Microcontrôleur</label>
+                            <select id="microcontroller" name="microcontroller">
+                                <option value="">Tous</option>
+                                <option value="arduino-uno">Arduino Uno</option>
+                                <option value="arduino-mega">Arduino Mega</option>
+                                <option value="esp32">ESP32</option>
+                                <option value="esp8266">ESP8266</option>
+                                <option value="raspberry-pi">Raspberry Pi</option>
+                                <option value="stm32">STM32</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn btn-primary">Rechercher</button>
+                        <button type="reset" class="btn btn-secondary" style="margin-left: 1rem;">Réinitialiser</button>
+                    </div>
+                </form>
+
+                <div style="margin-top: 4rem;">
+                    <h3 style="margin-bottom: 2rem;">Résultats de recherche</h3>
+                    <div id="search-results" class="projects-grid">
+                        <p style="text-align: center; color: var(--text-secondary); padding: 3rem;">
+                            Utilisez le formulaire ci-dessus pour rechercher des projets
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 MakersShare - Plateforme collaborative de partage de projets</p>
+            <ul class="footer-links">
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publier un Projet - MakersShare</title>
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">MakersShare</a>
+                <ul class="nav-menu">
+                    <button id="mode">🌙</button>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="categories.html">Catégories</a></li>
+                    <li><a href="search.html">Recherche</a></li>
+                    <li><a href="profile.html">Profil</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="section-container" style="text-align: center; padding: 3rem 0 2rem;">
+            <h1>Publier un nouveau Projet</h1>
+            <p style="color: var(--text-secondary); font-size: 1.1rem;">Remplissez les informations ci-dessous pour partager votre projet</p>
+        </div>
+
+        <form id="projectForm" novalidate>
+            <section id="detail">
+                <h1>Détails du Projet</h1>
+                <div id="a">
+                    <div id="title">
+                        <label for="titre">Titre du projet *</label>
+                        <input type="text" id="titre" name="titre" placeholder="Nom de votre projet" required>
+                        <span class="error-message" id="titre-error"></span>
+                    </div>
+                    <div id="cat">
+                        <label for="Categorie">Catégorie *</label>
+                        <select name="Categorie" id="Categorie" required>
+                            <option value="">Sélectionnez une catégorie</option>
+                            <option value="arduino">Arduino</option>
+                            <option value="esp32">ESP32 / ESP8266</option>
+                            <option value="robotique">Robotique</option>
+                            <option value="iot">IoT & Réseaux</option>
+                            <option value="ia">Intelligence Artificielle</option>
+                            <option value="programmation">Programmation</option>
+                            <option value="3d">Design & 3D</option>
+                            <option value="energie">Énergie & Systèmes</option>
+                        </select>
+                        <span class="error-message" id="Categorie-error"></span>
+                    </div>
+                </div>
+
+                <div id="b">
+                    <div id="desc">
+                        <label for="description">Description * <span id="char-count" style="color: var(--text-secondary); font-size: 0.9rem;">(0/500 caractères)</span></label>
+                        <textarea name="description" id="description" placeholder="Décrivez en détail les objectifs, les livrables et le contexte du projet..." maxlength="500" required></textarea>
+                        <span class="error-message" id="description-error"></span>
+                    </div>
+                    <div id="code">
+                        <label for="code">Code source (optionnel)</label>
+                        <textarea name="code" id="code" placeholder="Collez votre code Arduino, Python, etc."></textarea>
+                    </div>
+                    <div id="comp">
+                        <label for="composants">Liste des composants *</label>
+                        <textarea name="composants" id="composants" placeholder="Arduino Uno, LED, Résistance 220Ω..." required></textarea>
+                        <span class="error-message" id="composants-error"></span>
+                    </div>
+                </div>
+
+                <div id="c">
+                    <div id="date1">
+                        <label for="dated">Date de début</label>
+                        <input type="date" name="dated" id="dated">
+                        <span class="error-message" id="dated-error"></span>
+                    </div>
+                    <div id="date2">
+                        <label for="datef">Date de fin estimée</label>
+                        <input type="date" name="datef" id="datef">
+                        <span class="error-message" id="datef-error"></span>
+                    </div>
+                </div>
+
+                <div id="d">
+                    <div id="bd">
+                        <label for="budget">Budget (en DH)</label>
+                        <input type="number" name="budget" id="budget" placeholder="ex: 500" min="0">
+                        <span class="error-message" id="budget-error"></span>
+                    </div>
+                    <div id="mb">
+                        <label for="equipe">Membres de l'équipe (optionnel)</label>
+                        <input type="text" name="equipe" id="equipe" placeholder="Inviter par email ou nom d'utilisateur">
+                    </div>
+                </div>
+
+                <div id="e">
+                    <div id="niv">
+                        <label for="niveau">Niveau de difficulté *</label>
+                        <select name="niveau" id="niveau" required>
+                            <option value="">Sélectionnez un niveau</option>
+                            <option value="facile">Facile</option>
+                            <option value="moyen">Moyen</option>
+                            <option value="difficile">Difficile</option>
+                        </select>
+                        <span class="error-message" id="niveau-error"></span>
+                    </div>
+                    <div id="opt">
+                        <label for="option">Tags (séparés par des virgules)</label>
+                        <input type="text" name="option" id="option" placeholder="ex: Arduino, LED, Débutant">
+                    </div>
+                </div>
+
+                <!-- Nouveaux champs pour la validation -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
+                    <div>
+                        <label for="photo">Photo du projet * (.jpg, .jpeg, .png)</label>
+                        <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png" required>
+                        <span class="error-message" id="photo-error"></span>
+                        <div id="photo-preview" style="margin-top: 1rem; display: none;">
+                            <img id="preview-image" src="" alt="Aperçu" style="max-width: 200px; border-radius: 8px; border: 2px solid var(--border-color);">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="document">Document technique (.pdf)</label>
+                        <input type="file" id="document" name="document" accept=".pdf">
+                        <span class="error-message" id="document-error"></span>
+                        <div id="document-name" style="margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h1>Informations de contact</h1>
+                <div id="f">
+                    <div id="name">
+                        <label for="nom">Votre Nom *</label>
+                        <input type="text" id="nom" name="nom" placeholder="ex: Khalid Aidoun " required>
+                        <span class="error-message" id="nom-error"></span>
+                    </div>
+                    <div>
+                        <label for="dateNaissance">Date de naissance * (Vous devez avoir 18 ans ou plus)</label>
+                        <input type="date" id="dateNaissance" name="dateNaissance" required>
+                        <span class="error-message" id="dateNaissance-error"></span>
+                    </div>
+                    <div id="t">
+                        <label for="tel">Téléphone</label>
+                        <input type="tel" id="tel" name="tel" placeholder="+212 6 34 35 46 34">
+                        <span class="error-message" id="tel-error"></span>
+                    </div>
+                    <div id="em">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" placeholder="votre.email@exemple.com" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    <div>
+                        <label for="password">Mot de passe * (minimum 6 caractères)</label>
+                        <input type="password" id="password" name="password" placeholder="Mot de passe" required minlength="6">
+                        <span class="error-message" id="password-error"></span>
+                    </div>
+                    <div>
+                        <label for="confirmPassword">Confirmer le mot de passe *</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmez votre mot de passe" required>
+                        <span class="error-message" id="confirmPassword-error"></span>
+                    </div>
+                </div>
+            </section>
+
+            <div id="success-message" style="display: none; background: var(--success); color: white; padding: 1.5rem; border-radius: 8px; text-align: center; margin: 2rem 0; font-weight: 600;">
+                ✅ Projet publié avec succès ! Vous allez être redirigé vers la page des projets...
+            </div>
+
+            <section style="display: flex; justify-content: center; gap: 1rem; padding: 2rem 0;">
+                <button type="button" onclick="window.location.href='projects.html'">Annuler</button>
+                <button type="submit" id="submitBtn">Publier le Projet</button>
+            </section>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 MakersShare - Plateforme collaborative de partage de projets</p>
+            <ul class="footer-links">
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="form-validation.js"></script>
+</body>
+</html>
